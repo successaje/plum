@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}
+                {{title}}
+            {% endblock title %}
+        </title>
+        <link href = "{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id = "wrapper">
+            <header id = "header">
+                <div id = "logo">
+                    <img src="{% static 'images/logo.png' %}" alt = ""/> 
+                </div>
+                <div id = "top_banner">
+                    <img src="{% static 'images/top_banner.png' %}" width = "800" height = "200" alt =""/>
+                <!--
+                    <video width="800" height="200" controls>
+                        <source src="https://www.canva.com/design/DAEsDtUtL0I/share/preview?token=Blze7HNm2N4EFvuUdj1j3A&role=EDITOR&utm_content=DAEsDtUtL0I&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" type=video/mp4>
+                      </video>
+                    -->
+                </div>
+            </header>
+
+            <aside id = "leftsidebar">
+                <nav id = "nav">
+                    <ul>
+                        {% block sidenav %}
+                        <li>
+                            Menu 1
+                        </li>
+                        <li>
+                            Menu 2
+                        </li>
+                        <li>
+                            Menu 3
+                        </li>
+                        {% endblock sidenav %}
+                        <li>
+                            <a href="/contact">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/quote/">
+                                Get a Quote
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/quote/show">
+                                Show Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <section id = "main">
+                {% block content %}
+                <h1>
+                    Welcome!
+                </h1>
+                <p>
+                    This is the site template
+                </p>
+                {% endblock content %}
+            </section>
+            <footer id ="footer">
+                Copyright &copy; 2021 Plum Web Design
+            </footer>
+        </div>
+    </body>
+</html>
