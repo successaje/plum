@@ -36,7 +36,7 @@
             <td>Submit Date:</td><td>{{ quote.submitted|date:'m-d-y' }}</td>
         </tr>
         <tr>
-            <td>Quote Date:</td><td>{{ quote.quotedate|date: "m-d-y"|default:"pending" }}</td>
+            <td>Quote Date:</td><td>{{ quote.quotedate|date:'m-d-y'|default:"pending" }}</td>
         </tr>
         <tr>
             <td>Quote Price:</td><td>{{ quote.quoteprice|default:"--" }}</td>
