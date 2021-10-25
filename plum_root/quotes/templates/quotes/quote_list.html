@@ -24,6 +24,7 @@
     </tr>
     {% for quote in all_quotes %}
         <tr class="quoterow {% cycle '' 'altrow' %}">
+            <td><a href="show/{{ quote.id }}"> {{ quote.id }}</a></td>
             <td>
                 {{ quote.id }}
             </td>
