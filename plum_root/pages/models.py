@@ -8,4 +8,4 @@ class Page(models.Model):
     bodytext = models.TextField('Page Content', blank = True)
 
     def __str__(self):
-        return self.title
+        return str(self.title)
