@@ -1,4 +1,4 @@
-""" from django.db import models
+from django.db import models
 
 # Create your models here.
 class Topic(models.Model):
@@ -20,4 +20,4 @@ class AccessRecord(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return str(self.date) """
+        return str(self.date)

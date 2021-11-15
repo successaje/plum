@@ -10,6 +10,7 @@ from django.views.generic.detail import DetailView
 from .models import Quote
 from .forms import QuoteForm
 from pages.models import Page
+
 class Register(CreateView):
     template_name = 'registration/register.html'
     form_class = UserCreationForm
