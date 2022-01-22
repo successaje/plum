@@ -20,7 +20,7 @@
             <td><input type="submit" value="login"></td>
         </tr>
     </table>
-    <p>Not registered yet? <a href="{ url 'register' %}">Register here</a>.</p>
+    <p>Not registered yet? <a href="{% url 'register' %}">Register here</a>.</p>
     <input type="hidden" name="next" value="{{ next }}" />
     {% csrf_token %}
 </form>
